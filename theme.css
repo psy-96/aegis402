@@ -1,0 +1,284 @@
+/* ============================================================
+   AEGIS402 — Design Tokens
+   Base: shadcn/ui (Figma Variables, January 2026)
+   Extended: AEGIS402 semantic tokens
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. Tailwind Color Palette (tw/colors)
+      Extracted from Figma Variables — do not hardcode hex
+   ---------------------------------------------------------- */
+:root {
+  /* Slate */
+  --color-slate-50:  #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Gray */
+  --color-gray-50:  #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  /* Zinc */
+  --color-zinc-50:  #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  /* Red */
+  --color-red-50:  #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+
+  /* Amber */
+  --color-amber-50:  #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+  --color-amber-950: #451a03;
+
+  /* Green */
+  --color-green-50:  #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+
+  /* Blue */
+  --color-blue-50:  #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
+
+  /* Violet */
+  --color-violet-50:  #f5f3ff;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+
+  /* White / Black */
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+/* ----------------------------------------------------------
+   2. shadcn/ui Semantic Tokens — Light Mode (mode collection)
+   ---------------------------------------------------------- */
+:root {
+  --background:          var(--color-white);
+  --foreground:          var(--color-zinc-950);
+
+  --card:                var(--color-white);
+  --card-foreground:     var(--color-zinc-950);
+
+  --popover:             var(--color-white);
+  --popover-foreground:  var(--color-zinc-950);
+
+  --primary:             var(--color-zinc-900);
+  --primary-foreground:  var(--color-zinc-50);
+
+  --secondary:           var(--color-zinc-100);
+  --secondary-foreground:var(--color-zinc-900);
+
+  --muted:               var(--color-zinc-100);
+  --muted-foreground:    var(--color-zinc-500);
+
+  --accent:              var(--color-zinc-100);
+  --accent-foreground:   var(--color-zinc-900);
+
+  --destructive:         var(--color-red-500);
+  --destructive-foreground: var(--color-white);
+
+  --border:              var(--color-zinc-200);
+  --input:               var(--color-zinc-200);
+  --ring:                var(--color-zinc-500);
+
+  --sidebar:             var(--color-zinc-50);
+  --sidebar-foreground:  var(--color-zinc-950);
+  --sidebar-border:      var(--color-zinc-200);
+
+  /* Border radius (from tokens collection) */
+  --radius-none: 0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  16px;
+  --radius-3xl:  24px;
+  --radius-full: 9999px;
+}
+
+/* ----------------------------------------------------------
+   3. shadcn/ui Semantic Tokens — Dark Mode
+   ---------------------------------------------------------- */
+.dark {
+  --background:          var(--color-zinc-950);
+  --foreground:          var(--color-zinc-50);
+
+  --card:                var(--color-zinc-900);
+  --card-foreground:     var(--color-zinc-50);
+
+  --popover:             var(--color-zinc-900);
+  --popover-foreground:  var(--color-zinc-50);
+
+  --primary:             var(--color-zinc-50);
+  --primary-foreground:  var(--color-zinc-900);
+
+  --secondary:           var(--color-zinc-800);
+  --secondary-foreground:var(--color-zinc-50);
+
+  --muted:               var(--color-zinc-800);
+  --muted-foreground:    var(--color-zinc-400);
+
+  --accent:              var(--color-zinc-800);
+  --accent-foreground:   var(--color-zinc-50);
+
+  --destructive:         var(--color-red-700);
+  --destructive-foreground: var(--color-white);
+
+  --border:              var(--color-zinc-800);
+  --input:               var(--color-zinc-700);
+  --ring:                var(--color-zinc-400);
+
+  --sidebar:             var(--color-zinc-900);
+  --sidebar-foreground:  var(--color-zinc-50);
+  --sidebar-border:      var(--color-zinc-800);
+}
+
+/* ----------------------------------------------------------
+   4. AEGIS402 Custom Tokens
+      결제 상태, Hook, Escrow 전용 시맨틱 컬러
+   ---------------------------------------------------------- */
+:root {
+  /* ALLOW — green 계열 */
+  --aegis-allow-bg:       var(--color-green-50);
+  --aegis-allow-border:   var(--color-green-200);
+  --aegis-allow-text:     var(--color-green-800);
+  --aegis-allow-solid:    var(--color-green-600);
+
+  /* WARN — amber 계열 */
+  --aegis-warn-bg:        var(--color-amber-50);
+  --aegis-warn-border:    var(--color-amber-200);
+  --aegis-warn-text:      var(--color-amber-800);
+  --aegis-warn-solid:     var(--color-amber-600);
+
+  /* BLOCK — red 계열 */
+  --aegis-block-bg:       var(--color-red-50);
+  --aegis-block-border:   var(--color-red-200);
+  --aegis-block-text:     var(--color-red-800);
+  --aegis-block-solid:    var(--color-red-600);
+
+  /* ESCROW — blue 계열 */
+  --aegis-escrow-bg:      var(--color-blue-50);
+  --aegis-escrow-border:  var(--color-blue-200);
+  --aegis-escrow-text:    var(--color-blue-800);
+  --aegis-escrow-solid:   var(--color-blue-600);
+
+  /* HOOK (Uniswap V4) — violet 계열 */
+  --aegis-hook-bg:        var(--color-violet-50);
+  --aegis-hook-border:    #ddd6fe;
+  --aegis-hook-text:      var(--color-violet-700);
+  --aegis-hook-solid:     var(--color-violet-600);
+
+  /* Risk score bar */
+  --aegis-risk-low:       var(--color-green-500);
+  --aegis-risk-mid:       var(--color-amber-500);
+  --aegis-risk-high:      var(--color-red-500);
+  --aegis-risk-track:     var(--color-gray-200);
+}
+
+.dark {
+  /* ALLOW */
+  --aegis-allow-bg:       var(--color-green-950);
+  --aegis-allow-border:   var(--color-green-800);
+  --aegis-allow-text:     var(--color-green-300);
+
+  /* WARN */
+  --aegis-warn-bg:        var(--color-amber-950);
+  --aegis-warn-border:    var(--color-amber-800);
+  --aegis-warn-text:      var(--color-amber-300);
+
+  /* BLOCK */
+  --aegis-block-bg:       var(--color-red-950);
+  --aegis-block-border:   var(--color-red-800);
+  --aegis-block-text:     var(--color-red-300);
+
+  /* ESCROW */
+  --aegis-escrow-bg:      var(--color-blue-950);
+  --aegis-escrow-border:  var(--color-blue-800);
+  --aegis-escrow-text:    var(--color-blue-300);
+
+  /* HOOK */
+  --aegis-hook-bg:        #2e1065;
+  --aegis-hook-border:    #4c1d95;
+  --aegis-hook-text:      #c4b5fd;
+
+  /* Risk track */
+  --aegis-risk-track:     var(--color-zinc-700);
+}
+
+/* ----------------------------------------------------------
+   5. Typography (tw/font)
+   ---------------------------------------------------------- */
+:root {
+  --font-sans:  ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:  ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.25rem;   /* 20px */
+  --text-2xl:  1.5rem;    /* 24px */
+}
